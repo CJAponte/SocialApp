@@ -85,12 +85,20 @@ table {
     position: absolute;
     top: 50%;
     transform: translateY(550%);
+    flex-direction: column;
+
 }
 
 .signUpForm{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: 1.5vh;
+}
+
+.signUpFormContainer h3{
+    margin-top: .5vh;
+    text-align: center;
 }
 
 .signUpForm h1{
@@ -130,6 +138,15 @@ table {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 700;
+}
+
+.birthdayTitle{
+    text-align: center;
+    margin: 0px auto;
+    color:  grey;
+    margin-top: .5rem;
+    font-size: 1em;
+    cursor: default;
 }
 
 

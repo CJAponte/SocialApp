@@ -50,6 +50,82 @@ table {
 
 /* --------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300&display=swap');
+
+:root {
+    --primary-color: aquamarine;
+    --secondary-color: aqua;
+}
+
 .homeContainer h1{
     text-align: center;
+}
+
+.homeBody{
+	position: relative;
+	top: 4.5rem;
+}
+
+.navList{
+	position: relative;
+	top: 1rem;
+	display: flex;
+	flex-direction: row-reverse;
+	width: 150px;
+	max-width: 150px;
+	justify-content: space-evenly;
+	float: right;
+}
+
+.loginButton{
+	background: var(--primary-color);
+	color: black;
+	text-decoration: none;
+	padding: 1.5vh 2.5vh;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+	font-weight: 700;
+	
+}
+
+.loginButton a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.loginButton:hover{
+	background: var(--secondary-color);
+}
+
+
+.signupButton{
+	background: var(--primary-color);
+	color: black;
+	text-decoration: none;
+	padding: 1.5vh 2.5vh;
+	border-radius: 5px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.signupButton:hover{
+	background: var(--secondary-color);
+}
+
+.signoutButton{
+	background: var(--primary-color);
+	color: black;
+	text-decoration: none;
+	padding: 1.5vh 2.5vh;
+	border-radius: 5px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
 }

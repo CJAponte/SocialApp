@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Home from './Components/Home/Home'
@@ -9,41 +8,25 @@ import Login from './Components/Auth/Login/Login'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
+
+import { AuthProvider } from "./Components/Auth/Auth/Auth"
+import PrivateRoute from './PrivateRoute'
 
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/signup">Sign-Up</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-        <Route path="/login">
-            <Login />
-          </Route>
-        <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>     
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <PrivateRoute exact path="/" component={Home} />
+          </Switch>
+        </div>     
+      </Router>
+    </AuthProvider>
   );
 }
 

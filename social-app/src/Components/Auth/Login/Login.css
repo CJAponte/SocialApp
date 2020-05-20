@@ -85,6 +85,15 @@ table {
     position: absolute;
     top: 50%;
     transform: translateY(550%);
+    flex-direction: column;
+}
+.loginFormContainer form{
+    margin-bottom: 1.5vh;
+}
+
+.loginFormContainer h3{
+    margin-top: .5vh;
+    text-align: center;
 }
 
 .loginForm{
