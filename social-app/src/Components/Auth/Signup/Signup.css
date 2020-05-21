@@ -82,6 +82,7 @@ table {
     padding: 3vh;
     align-self: center;
     margin: 0px auto;
+    margin-top: -25vh;
     position: absolute;
     top: 50%;
     transform: translateY(550%);

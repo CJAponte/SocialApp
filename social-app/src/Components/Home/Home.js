@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import './Home.css'
-import {
-    Link
-  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import app from '../Config/Base'
 import { Redirect } from 'react-router'
 import { AuthContext } from '../Auth/Auth/Auth'
@@ -18,7 +16,6 @@ const Home = () => {
         return <Redirect to='/' />
     }
 
-    console.log(currentUser)
     return(
         <div className="homeContainer">
 
@@ -29,7 +26,6 @@ const Home = () => {
             <Link to="/login" className="signoutButton" onClick={
                 () =>{
                     app.auth().signOut()
-                    console.log('test', currentUser)
                 }
             }>Sign Out</Link>
           </ul>
