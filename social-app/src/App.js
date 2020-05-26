@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Components/Home/Home'
 import Signup from './Components/Auth/Signup/Signup'
 import Login from './Components/Auth/Login/Login'
+import CreateProfile from './Components/CreateProfile/CreateProfile'
 
 import {
   BrowserRouter as Router,
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <PrivateRoute exact path="/" component={Home} />
+            <Route exact path="/create-profile" component={CreateProfile} />
           </Switch>
         </div>     
       </Router>
